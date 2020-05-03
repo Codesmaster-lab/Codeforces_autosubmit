@@ -3,8 +3,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 import sys
 from selenium.webdriver.support import expected_conditions as EC
 
-username='Codesmaster'
-passw='9434952182'
+username='YOUR_USERNAME'
+passw='YOUR_PASSWORD'
 arg=sys.argv
 #prob=input("Enter the problem code : ")
 prob=arg[1]
@@ -32,7 +32,7 @@ submit_box.click()
 WebDriverWait(driver,10).until(EC.url_to_be(url))
 
 #UPLOAD PROCESS
-driver.find_element_by_name("sourceFile").send_keys("E:/Codes/"+file)
+driver.find_element_by_name("sourceFile").send_keys("YOUR_SOURCE_FILE_DESTINATION"+file)
 upload_box=driver.find_element_by_class_name('submit')
 upload_box.click()
 
